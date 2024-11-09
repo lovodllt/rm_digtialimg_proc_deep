@@ -213,3 +213,33 @@ std::vector<OneArmor> startInferAndNMS(dataImg img_data ){
     return qualifiedArmors;
 }
 
+void show_points_result(cv::Mat& img,std::vector<OneArmor> armors_data ) {
+  std::map<int , std::string>colors ;
+  colors[1] = "red";
+  colors[0] = "blue";
+  for (auto i: armors_data) {
+    // cv::rectangle(img, i.box, cv::Scalar(0, 255, 0), 2);
+    for(int j=0;j<4;j++){
+      cv::line(img, i.objects_keypoints[j], i.objects_keypoints[(j + 1) % 4], cv::Scalar(0, 255, 0), 1);
+    }
+    for(int j=0;j<4;j++){
+      if(j == 0){
+        cv::circle(img, i.objects_keypoints[j], 2, cv::Scalar(0, 0, 255), -1);
+      }else if(j==1){     cv::circle(img, i.objects_keypoints[j], 2, cv::Scalar(0, 0, 0), -1);}
+      else if(j==2){     cv::circle(img, i.objects_keypoints[j], 2, cv::Scalar(0, 255, 0), -1);}
+      else if(j==3){     cv::circle(img, i.objects_keypoints[j], 2, cv::Scalar(255, 0, 0), -1);}
+    }
+    //cv::rectangle(img, i.box, cv::Scalar(0, 255, 0), 2);
+    cv::putText(img, colors[i.class_ids], i.objects_keypoints[0], cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 255, 0), 2);
+  }
+}
+void show_box_result(cv::Mat& img,std::vector<OneArmor> armors_data ) {
+  for(auto i: armors_data){
+    cv::rectangle(img, i.box, cv::Scalar(0, 255, 0), 2);
+  }
+}
+void show_number_result(cv::Mat& img,std::vector<OneArmor> armors_data){
+  for(auto i: armors_data){
+    cv::putText(img, i.number, i.objects_keypoints[3], cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 255, 0), 2);
+  }
+}

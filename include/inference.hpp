@@ -62,6 +62,10 @@ static ov::Output<const ov::Node> input_port;
 dataImg preprocessImage(const cv::Mat& img, cv::Size new_shape=cv::Size( XML_SIZE, XML_SIZE), cv::Scalar color=cv::Scalar(114,114,114)); //图片预处理
 std::vector<OneArmor> startInferAndNMS(dataImg data );//开始推理并返回结果
 
+void show_points_result(cv::Mat& img,std::vector<OneArmor> armors_data );
+void show_box_result(cv::Mat& img,std::vector<OneArmor> armors_data );
+void show_number_result(cv::Mat& img,std::vector<OneArmor> armors_data);
+
 #define V8_INFERENCE_H
 
 #endif //V8_INFERENCE_H
