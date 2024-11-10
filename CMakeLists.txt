@@ -21,6 +21,9 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  sensor_msgs
+  cv_bridge
+  image_transport
 )
 find_package(OpenCV 4 REQUIRED)
 
@@ -244,7 +247,7 @@ include_directories(
 
 link_libraries(libopenvino.so)
 
-add_executable(INFERENCE
+add_executable(video_detector_node
         src/video_detect_test.cpp
         src/tradition.cpp
         src/inference.cpp
@@ -253,8 +256,9 @@ add_executable(INFERENCE
 )
 target_link_libraries(
 
-        INFERENCE
+        video_detector_node
 
+        ${catkin_LIBRARIES}
         ${OpenCV_LIBS}
         ${InferenceEngine_LIBRARIES}
 
