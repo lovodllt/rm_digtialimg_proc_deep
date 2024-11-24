@@ -33,9 +33,9 @@
 //******************推理**************
 //模型加载（懒狗不想写类，全用静态函数了）
 struct dataImg{
-    float scale;
-    cv::Mat blob;
-    cv::Mat input;
+    float scale; //缩放比例
+    cv::Mat blob; //处理后的图像blob
+    cv::Mat input; //原始输入图像
 };
 struct Armor{
     std::vector<float> class_scores;

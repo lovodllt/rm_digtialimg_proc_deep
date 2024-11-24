@@ -10,4 +10,5 @@
 
     <!-- 启动视频检测节点 -->
     <node name="video_detector_node" pkg="rm_digtialimg_proc_test" type="video_detector_node"  output="screen"/>
+
 </launch>
