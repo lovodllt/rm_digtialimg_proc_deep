@@ -5,7 +5,7 @@
 		<Option title="rm_digtialimg_proc_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\noetic\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cpp_common\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_runtime\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rostime\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rostime\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosconsole\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospy\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospy\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\image_transport\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\image_transport\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_filters\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\pluginlib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\class_loader\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslib\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\noetic\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cpp_common\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_runtime\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rostime\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rostime\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosconsole\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospy\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospy\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\image_transport\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\image_transport\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_filters\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\pluginlib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\class_loader\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslib\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\nodelet\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\nodelet\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\bondcpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\bondcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\bond\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\bond\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\smclib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\smclib\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
@@ -317,11 +317,111 @@
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="nodelet_generate_messages_cpp">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nodelet_generate_messages_eus">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nodelet_generate_messages_lisp">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nodelet_generate_messages_nodejs">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nodelet_generate_messages_py">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bond_generate_messages_cpp">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 bond_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bond_generate_messages_eus">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 bond_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bond_generate_messages_lisp">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 bond_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bond_generate_messages_nodejs">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 bond_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bond_generate_messages_py">
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 bond_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="video_detector_node">
-				<Option output="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/devel/lib/rm_digtialimg_proc_test/video_detector_node" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/devel/lib/rm_digtialimg_proc_test"/>
+				<Option output="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/devel/lib/libvideo_detector_node.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
@@ -351,10 +451,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="video_detector_node/fast">
-				<Option output="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/devel/lib/rm_digtialimg_proc_test/video_detector_node" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/devel/lib/rm_digtialimg_proc_test"/>
+				<Option output="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/devel/lib/libvideo_detector_node.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
@@ -662,15 +762,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/src/inference.cpp">
-			<Option target="video_detector_node"/>
-		</Unit>
-		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/src/number_classifier.cpp">
-			<Option target="video_detector_node"/>
-		</Unit>
-		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/src/tradition.cpp">
-			<Option target="video_detector_node"/>
-		</Unit>
 		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/src/video_detect_test.cpp">
 			<Option target="video_detector_node"/>
 		</Unit>
@@ -1033,6 +1124,36 @@
 		</Unit>
 		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/rospack/cmake/rospackConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/nodelet/cmake/nodelet-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\nodelet\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/nodelet/cmake/nodeletConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\nodelet\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/nodelet/cmake/nodeletConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\nodelet\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/bondcpp/cmake/bondcppConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\bondcpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/bondcpp/cmake/bondcppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\bondcpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/bond/cmake/bond-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\bond\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/bond/cmake/bondConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\bond\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/bond/cmake/bondConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\bond\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/smclib/cmake/smclibConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\smclib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/../../../../../opt/ros/noetic/share/smclib/cmake/smclibConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\noetic\share\smclib\cmake\"/>
 		</Unit>
 		<Unit filename="/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/catkin/catkin_generated/version/package.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\catkin\catkin_generated\version\"/>

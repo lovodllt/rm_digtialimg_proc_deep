@@ -28,6 +28,16 @@
 /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
 /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
 /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/geometry_msgs_generate_messages_py.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/nodelet_generate_messages_cpp.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/nodelet_generate_messages_eus.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/nodelet_generate_messages_lisp.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/nodelet_generate_messages_nodejs.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/nodelet_generate_messages_py.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/bond_generate_messages_cpp.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/bond_generate_messages_eus.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/bond_generate_messages_lisp.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/bond_generate_messages_nodejs.dir
+/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/bond_generate_messages_py.dir
 /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/video_detector_node.dir
 /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/test.dir
 /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/edit_cache.dir

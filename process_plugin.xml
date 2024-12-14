@@ -1,0 +1,8 @@
+<library path="lib/librm_digtialimg_proc_test">
+    <class
+            name="rm_digtialimg_proc_test/Processor"
+            type="rm_digtialimg_proc_test::Processor"
+            base_class_type="nodelet::Nodelet">
+    <description>This is a image process plugin test.</description>
+    </class>
+</library>

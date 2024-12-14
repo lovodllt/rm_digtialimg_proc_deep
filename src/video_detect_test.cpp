@@ -65,41 +65,38 @@ int main(int argc, char* argv[])
 #include "../include/inference.hpp"
 #include "../include/tradition.hpp"
 #include "../include/number_classifier.hpp"
+#include "nodelet/nodelet.h"
+#include "pluginlib/class_list_macros.h"
+#include "../include/process_plugins.h"
+#include <ros/callback_queue.h>
 
-// 定义回调函数处理接收到的图像
-void imageCallback(const sensor_msgs::ImageConstPtr& msg)
+using namespace cv;
+using namespace std;
+
+
+
+namespace rm_digtialimg_proc_test {
+
+void Processor::onInit()
 {
-  try
-  {
-    cv::Mat frame = cv_bridge::toCvShare(msg, "bgr8")->image;
+  ros::NodeHandle& nh = getPrivateNodeHandle();
+  image_transport::ImageTransport it(nh); // 创建一个it对象处理图像消息
+  image_transport::Subscriber sub =
+      it.subscribe("/galaxy_camera/image_raw", 10, &Processor::callback2,this);
 
-    cv::TickMeter tm;
-    tm.start();
-    dataImg blob = preprocessImage(frame);
-    auto armors_data = startInferAndNMS(blob);
-    auto armors_data_ = classify(frame, armors_data);
-    tm.stop();
-    std::cout << "time cost: " << tm.getTimeMilli() << "ms" << std::endl;
-    show_number_result(frame, armors_data_);
-    show_points_result(frame, armors_data_);
-
-    // 显示结果
-    cv::imshow("result", frame);
-    cv::waitKey(1);  // 必须有等待按键，否则窗口会卡住
-  }
-  catch (cv_bridge::Exception& e)
-  {
-    ROS_ERROR("cv_bridge exception: %s", e.what());
-  }
 }
 
-int main(int argc, char** argv)
-{
-  ros::init(argc, argv, "video_detector_node");
-  ros::NodeHandle nh;
-  image_transport::ImageTransport it(nh);
-  image_transport::Subscriber sub = it.subscribe("camera/image_raw", 1, imageCallback);
 
-  ros::spin();
-  return 0;
+void Processor::initialize(ros::NodeHandle &nh) {}
+void Processor::imageProcess(cv_bridge::CvImagePtr &cv_image) {}
+void Processor::paramReconfig() {}
+void Processor::findArmor() {}
+rm_vision::ProcessorInterface::Object Processor::getObj() {
+  return rm_vision::ProcessorInterface::Object();
 }
+void Processor::putObj() {}
+void Processor::draw() {}
+
+}
+
+PLUGINLIB_EXPORT_CLASS(rm_digtialimg_proc_test::Processor, nodelet::Nodelet)

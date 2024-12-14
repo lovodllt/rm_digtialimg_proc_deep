@@ -562,6 +562,136 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named nodelet_generate_messages_cpp
+
+# Build rule for target.
+nodelet_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nodelet_generate_messages_cpp
+.PHONY : nodelet_generate_messages_cpp
+
+# fast build rule for target.
+nodelet_generate_messages_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nodelet_generate_messages_cpp.dir/build.make CMakeFiles/nodelet_generate_messages_cpp.dir/build
+.PHONY : nodelet_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_eus
+
+# Build rule for target.
+nodelet_generate_messages_eus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nodelet_generate_messages_eus
+.PHONY : nodelet_generate_messages_eus
+
+# fast build rule for target.
+nodelet_generate_messages_eus/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nodelet_generate_messages_eus.dir/build.make CMakeFiles/nodelet_generate_messages_eus.dir/build
+.PHONY : nodelet_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_lisp
+
+# Build rule for target.
+nodelet_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nodelet_generate_messages_lisp
+.PHONY : nodelet_generate_messages_lisp
+
+# fast build rule for target.
+nodelet_generate_messages_lisp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nodelet_generate_messages_lisp.dir/build.make CMakeFiles/nodelet_generate_messages_lisp.dir/build
+.PHONY : nodelet_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_nodejs
+
+# Build rule for target.
+nodelet_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nodelet_generate_messages_nodejs
+.PHONY : nodelet_generate_messages_nodejs
+
+# fast build rule for target.
+nodelet_generate_messages_nodejs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+.PHONY : nodelet_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_py
+
+# Build rule for target.
+nodelet_generate_messages_py: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nodelet_generate_messages_py
+.PHONY : nodelet_generate_messages_py
+
+# fast build rule for target.
+nodelet_generate_messages_py/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nodelet_generate_messages_py.dir/build.make CMakeFiles/nodelet_generate_messages_py.dir/build
+.PHONY : nodelet_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_cpp
+
+# Build rule for target.
+bond_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bond_generate_messages_cpp
+.PHONY : bond_generate_messages_cpp
+
+# fast build rule for target.
+bond_generate_messages_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bond_generate_messages_cpp.dir/build.make CMakeFiles/bond_generate_messages_cpp.dir/build
+.PHONY : bond_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_eus
+
+# Build rule for target.
+bond_generate_messages_eus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bond_generate_messages_eus
+.PHONY : bond_generate_messages_eus
+
+# fast build rule for target.
+bond_generate_messages_eus/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bond_generate_messages_eus.dir/build.make CMakeFiles/bond_generate_messages_eus.dir/build
+.PHONY : bond_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_lisp
+
+# Build rule for target.
+bond_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bond_generate_messages_lisp
+.PHONY : bond_generate_messages_lisp
+
+# fast build rule for target.
+bond_generate_messages_lisp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bond_generate_messages_lisp.dir/build.make CMakeFiles/bond_generate_messages_lisp.dir/build
+.PHONY : bond_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_nodejs
+
+# Build rule for target.
+bond_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bond_generate_messages_nodejs
+.PHONY : bond_generate_messages_nodejs
+
+# fast build rule for target.
+bond_generate_messages_nodejs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bond_generate_messages_nodejs.dir/build.make CMakeFiles/bond_generate_messages_nodejs.dir/build
+.PHONY : bond_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_py
+
+# Build rule for target.
+bond_generate_messages_py: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bond_generate_messages_py
+.PHONY : bond_generate_messages_py
+
+# fast build rule for target.
+bond_generate_messages_py/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bond_generate_messages_py.dir/build.make CMakeFiles/bond_generate_messages_py.dir/build
+.PHONY : bond_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named video_detector_node
 
 # Build rule for target.
@@ -626,78 +756,6 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/inference.o: src/inference.cpp.o
-.PHONY : src/inference.o
-
-# target to build an object file
-src/inference.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/inference.cpp.o
-.PHONY : src/inference.cpp.o
-
-src/inference.i: src/inference.cpp.i
-.PHONY : src/inference.i
-
-# target to preprocess a source file
-src/inference.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/inference.cpp.i
-.PHONY : src/inference.cpp.i
-
-src/inference.s: src/inference.cpp.s
-.PHONY : src/inference.s
-
-# target to generate assembly for a file
-src/inference.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/inference.cpp.s
-.PHONY : src/inference.cpp.s
-
-src/number_classifier.o: src/number_classifier.cpp.o
-.PHONY : src/number_classifier.o
-
-# target to build an object file
-src/number_classifier.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/number_classifier.cpp.o
-.PHONY : src/number_classifier.cpp.o
-
-src/number_classifier.i: src/number_classifier.cpp.i
-.PHONY : src/number_classifier.i
-
-# target to preprocess a source file
-src/number_classifier.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/number_classifier.cpp.i
-.PHONY : src/number_classifier.cpp.i
-
-src/number_classifier.s: src/number_classifier.cpp.s
-.PHONY : src/number_classifier.s
-
-# target to generate assembly for a file
-src/number_classifier.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/number_classifier.cpp.s
-.PHONY : src/number_classifier.cpp.s
-
-src/tradition.o: src/tradition.cpp.o
-.PHONY : src/tradition.o
-
-# target to build an object file
-src/tradition.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/tradition.cpp.o
-.PHONY : src/tradition.cpp.o
-
-src/tradition.i: src/tradition.cpp.i
-.PHONY : src/tradition.i
-
-# target to preprocess a source file
-src/tradition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/tradition.cpp.i
-.PHONY : src/tradition.cpp.i
-
-src/tradition.s: src/tradition.cpp.s
-.PHONY : src/tradition.s
-
-# target to generate assembly for a file
-src/tradition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/video_detector_node.dir/build.make CMakeFiles/video_detector_node.dir/src/tradition.cpp.s
-.PHONY : src/tradition.cpp.s
-
 src/video_detect_test.o: src/video_detect_test.cpp.o
 .PHONY : src/video_detect_test.o
 
@@ -735,6 +793,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... bond_generate_messages_cpp"
+	@echo "... bond_generate_messages_eus"
+	@echo "... bond_generate_messages_lisp"
+	@echo "... bond_generate_messages_nodejs"
+	@echo "... bond_generate_messages_py"
 	@echo "... clean_test_results"
 	@echo "... download_extra_data"
 	@echo "... doxygen"
@@ -743,6 +806,11 @@ help:
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... nodelet_generate_messages_cpp"
+	@echo "... nodelet_generate_messages_eus"
+	@echo "... nodelet_generate_messages_lisp"
+	@echo "... nodelet_generate_messages_nodejs"
+	@echo "... nodelet_generate_messages_py"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
@@ -770,15 +838,6 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... video_detector_node"
-	@echo "... src/inference.o"
-	@echo "... src/inference.i"
-	@echo "... src/inference.s"
-	@echo "... src/number_classifier.o"
-	@echo "... src/number_classifier.i"
-	@echo "... src/number_classifier.s"
-	@echo "... src/tradition.o"
-	@echo "... src/tradition.i"
-	@echo "... src/tradition.s"
 	@echo "... src/video_detect_test.o"
 	@echo "... src/video_detect_test.i"
 	@echo "... src/video_detect_test.s"
