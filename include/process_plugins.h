@@ -324,63 +324,44 @@ public:
 
   void onInit() override;
 
-private:
-  rm_msgs::TargetDetectionArray target_array_;
-  ros::Publisher target_pub_;
-  ros::Subscriber track_sub_;
-  ros::Subscriber detection_sub_;
-  ros::Subscriber compute_sub_;
-  ros::NodeHandle nh_;
-  std::shared_ptr<image_transport::ImageTransport> it_;
-  image_transport::CameraSubscriber cam_sub_;
-  void callback(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info)
-  {
-    if (!target_is_armor_)
-    {
-      //      ROS_INFO("not armor");
-      return;
-    }
-    camera_info_ = info;
-    target_array_.header = info->header;
-    boost::shared_ptr<cv_bridge::CvImage> temp =
-        boost::const_pointer_cast<cv_bridge::CvImage>(cv_bridge::toCvShare(img, "bgr8"));
-    imageProcess(temp);
-    findArmor();
-    draw();
-    for (auto& target : target_array_.detections)
-    {
-      target.pose.position.x = info->roi.x_offset;
-      target.pose.position.y = info->roi.y_offset;
-    }
-    target_array_.is_red = target_is_red_;
-    target_pub_.publish(target_array_);
-  }
-
   // 定义回调函数处理接收到的图像
-  void callback2(const sensor_msgs::ImageConstPtr& msg)
-  {
-    try {
-      cv::Mat frame =
-          cv_bridge::toCvShare(msg, "bgr8")->image; // 将ros图像消息转为opencv格式
+  void callback2(const sensor_msgs::ImageConstPtr& msg);
 
-      cv::TickMeter tm; // tm:用于测量后续操作的时间
-      tm.start();       // 开始计时
-      dataImg blob = preprocessImage(frame);            // 图像预处理
-      auto armors_data = startInferAndNMS(blob);        // 深度推理
-      auto armors_data_ = classify(frame, armors_data); // 数字分类
-      tm.stop();                                        // 停止计时
-      std::cout << "time cost: " << tm.getTimeMilli() << "ms"
-                << std::endl; // 输出整个处理过程所花费的时间
-      show_number_result(frame, armors_data_);
-      show_points_result(frame, armors_data_);
+private:
+//  rm_msgs::TargetDetectionArray target_array_;
+//  ros::Publisher target_pub_;
+//  ros::Subscriber track_sub_;
+//  ros::Subscriber detection_sub_;
+//  ros::Subscriber compute_sub_;
+//  ros::NodeHandle nh_;
+//  std::shared_ptr<image_transport::ImageTransport> it_;
+//  image_transport::CameraSubscriber cam_sub_;
 
-      // 显示结果
-      cv::imshow("result", frame);
-      cv::waitKey(1); // 必须有等待按键，否则窗口会卡住
-    } catch (cv_bridge::Exception &e) {
-      ROS_ERROR("cv_bridge exception: %s", e.what());
-    }
-  }
+  image_transport::Publisher target_pub_;
+
+//  void callback(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info)
+//  {
+//    if (!target_is_armor_)
+//    {
+//      //      ROS_INFO("not armor");
+//      return;
+//    }
+//    camera_info_ = info;
+//    target_array_.header = info->header;
+//    boost::shared_ptr<cv_bridge::CvImage> temp =
+//        boost::const_pointer_cast<cv_bridge::CvImage>(cv_bridge::toCvShare(img, "bgr8"));
+//    imageProcess(temp);
+//    findArmor();
+//    draw();
+//    for (auto& target : target_array_.detections)
+//    {
+//      target.pose.position.x = info->roi.x_offset;
+//      target.pose.position.y = info->roi.y_offset;
+//    }
+//    target_array_.is_red = target_is_red_;
+//    target_pub_.publish(target_array_);
+//  }
+
 
   void trackCB(const rm_msgs::TrackData track_data)
   {

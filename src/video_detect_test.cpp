@@ -74,7 +74,6 @@ using namespace cv;
 using namespace std;
 
 
-
 namespace rm_digtialimg_proc_test {
 
 void Processor::onInit()
@@ -82,10 +81,39 @@ void Processor::onInit()
   ros::NodeHandle& nh = getPrivateNodeHandle();
   image_transport::ImageTransport it(nh); // 创建一个it对象处理图像消息
   image_transport::Subscriber sub =
-      it.subscribe("/galaxy_camera/image_raw", 10, &Processor::callback2,this);
+      it.subscribe("/hk_camera/image_raw", 10, &Processor::callback2,this);
 
+  target_pub_ = it.advertise("/processor/image_raw", 10, "compressed");
 }
 
+void Processor::callback2(const sensor_msgs::ImageConstPtr& msg)
+{
+  try {
+    cv::Mat frame =
+        cv_bridge::toCvShare(msg, "bgr8")->image; // 将ros图像消息转为opencv格式
+
+    cv::TickMeter tm; // tm:用于测量后续操作的时间
+    tm.start();       // 开始计时
+    dataImg blob = preprocessImage(frame);            // 图像预处理
+    auto armors_data = startInferAndNMS(blob);        // 深度推理
+    auto armors_data_ = classify(frame, armors_data); // 数字分类
+    tm.stop();                                        // 停止计时
+    std::cout << "time cost: " << tm.getTimeMilli() << "ms"
+              << std::endl; // 输出整个处理过程所花费的时间
+    show_number_result(frame, armors_data_);
+    show_points_result(frame, armors_data_);
+
+    // 显示结果
+    cv::imshow("result", frame);
+    cv::waitKey(1); // 必须有等待按键，否则窗口会卡住
+
+    sensor_msgs::ImagePtr msg_out = cv_bridge::CvImage(std_msgs::Header(), "bgr8", frame).toImageMsg();
+    target_pub_.publish(msg_out);
+
+  } catch (cv_bridge::Exception &e) {
+    ROS_ERROR("cv_bridge exception: %s", e.what());
+  }
+}
 
 void Processor::initialize(ros::NodeHandle &nh) {}
 void Processor::imageProcess(cv_bridge::CvImagePtr &cv_image) {}
