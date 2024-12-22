@@ -19,10 +19,10 @@
 //#include <rm_digtialimg_proc_test/PreprocessConfig.h>
 //#include <rm_digtialimg_proc_test/DrawConfig.h>
 //#include <rm_digtialimg_proc_test/MakedatasetConfig.h>
-#include "../include/ArmorConfig.h"
-#include "../include/PreprocessConfig.h"
-#include "../include/DrawConfig.h"
-#include "../include/MakedatasetConfig.h"
+#include "../include/config/ArmorConfig.h"
+#include "../include/config/PreprocessConfig.h"
+#include "../include/config/DrawConfig.h"
+#include "../include/config/MakedatasetConfig.h"
 #include <mutex>
 #include <thread>
 #include <nodelet/nodelet.h>
