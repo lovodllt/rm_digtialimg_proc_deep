@@ -15,7 +15,7 @@ set(INC_DIR "/opt/intel/openvino_2023.3.0/runtime/include")
 set(LINK_DIR "/opt/intel/openvino_2023.3.0/runtime/lib/intel64")
 set(OpenVINO_DIR_TEST "/opt/intel/openvino_2023.3.0/runtime/lib/intel64/libopenvino.so")
 
-add_compile_options(-std=c++14)
+add_compile_options(-std=c++17)
 add_compile_options(-D_GLIBCXX_USE_CXX11_ABI=1)
 set(CMAKE_CXX_FLAGS"-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
