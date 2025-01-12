@@ -326,6 +326,7 @@ public:
 
   // 定义回调函数处理接收到的图像
   void callback2(const sensor_msgs::ImageConstPtr& msg);
+  void callback2(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info);
 
 private:
 //  rm_msgs::TargetDetectionArray target_array_;
@@ -334,8 +335,8 @@ private:
 //  ros::Subscriber detection_sub_;
 //  ros::Subscriber compute_sub_;
 //  ros::NodeHandle nh_;
-//  std::shared_ptr<image_transport::ImageTransport> it_;
-//  image_transport::CameraSubscriber cam_sub_;
+  std::shared_ptr<image_transport::ImageTransport> it_;
+  image_transport::CameraSubscriber cam_sub_;
 
   image_transport::Publisher target_pub_;
 

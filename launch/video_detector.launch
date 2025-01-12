@@ -4,17 +4,18 @@
         <param name="num_worker_threads" value="8" />
     </node>
 
+        <!--定义了一个名为 "galaxy_camera" 的节点-->
 <!--    <node pkg="nodelet" type="nodelet" name="galaxy_camera"-->
 <!--          args="load galaxy_camera/galaxy_camera_nodelet $(arg manager_name)"-->
 <!--          output="screen">-->
-<!--        &lt;!&ndash; <param name="camera_SN" value="KE0200060392" /> &ndash;&gt;-->
+<!--&lt;!&ndash;         <param name="camera_SN" value="KE0200060392" />&ndash;&gt;-->
 <!--    </node>-->
 
-    <!--定义了一个名为 "hk_camera" 的节点-->
+<!--    定义了一个名为 "hk_camera" 的节点-->
      <node pkg="nodelet" type="nodelet" name="hk_camera"
            args="load hk_camera/HKCameraNodelet $(arg manager_name)"
            output="screen">
-         <param name="camera_name" value="hk_camera"/> 
+         <param name="camera_name" value="hk_camera"/>
          <param name="image_width" value="1440"/>
          <param name="image_height" value="1080"/>
          <param name="pixel_format" value="bgr8"/>
@@ -24,10 +25,27 @@
          <param name="frame_rate" value="15"/>
      </node>
 
-    <node pkg="nodelet" type="nodelet" name="Processor"
-          args="load rm_digtialimg_proc_test/Processor $(arg manager_name)" >
-    </node>
+<!--    <node pkg="nodelet" type="nodelet" name="Processor"-->
+<!--          args="load rm_digtialimg_proc_test/Processor $(arg manager_name)" >-->
 
+<!--&lt;!&ndash;        <remap from="/hk_camera/image_raw" to="/galaxy_camera/galaxy_camera/image_raw"/>&ndash;&gt;-->
+<!--        <remap from="/hk_camera/image_raw" to="/hk_camera/image_raw"/>-->
+<!--    </node>-->
+
+    <node pkg="nodelet" type="nodelet" name="processor"
+          args="load rm_digtialimg_proc_test/Processor $(arg manager_name)" > <!--加载了名为 "Processor" 的插件，并设置了一些参数-->
+        <rosparam file="$(find rm_digtialimg_proc_test)/config/weibull_coefficient.yaml" command="load" />
+        <rosparam file="$(find rm_digtialimg_proc_test)/config/make_dataset.yaml" command="load" />
+        <rosparam file="$(find rm_digtialimg_proc_test)/config/armor_coefficient.yaml" command="load" />
+        <rosparam file="$(find rm_digtialimg_proc_test)/config/preprocess_coefficient.yaml" command="load" />
+        rewrite to="/upper(lower)_processor/result_msg"
+        <remap from="/processor/result_msg" to="/processor/result_msg"/>
+        rewrite to="upper(lower)_debug_image"
+<!--        <remap from="debug_image" to="debug_image"/>-->
+        rewrite 'to=???/image_raw' ??? is camera name
+        <!--   <remap from="/galaxy_camera/image_raw" to="/galaxy_camera/galaxy_camera/image_raw"/>-->
+<!--        <remap from="/galaxy_camera/image_raw" to="/hk_camera/image_raw"/>-->
+    </node>
 
 
 <!--    &lt;!&ndash; 启动视频检测节点 &ndash;&gt;-->

@@ -14,7 +14,7 @@
 
 #include "inference.hpp"
 
-#define number_classifier_model_path_ "../model/number_classifier.onnx"
+#define number_classifier_model_path_ "/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/model/number_classifier.onnx"
 
 static std::once_flag flag_;
 static cv::dnn::Net net_;

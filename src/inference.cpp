@@ -7,6 +7,7 @@ static void using_once();
 static void Initialize()
 {
     std::cout<<"initialize"<<std::endl;
+
     //编译模型
     compiled_model = core.compile_model(model_path,"CPU"); //使用 OpenVINO 的 Core 对象编译模型
 //    core.set_property({ { CONFIG_KEY(CPU_BIND_THREAD), "NO" } });

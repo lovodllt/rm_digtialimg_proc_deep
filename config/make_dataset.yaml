@@ -1,0 +1,6 @@
+dataset_path: "/home/haomo/ArmorId/train/"
+make_dataset: false
+dataset_split: "train_set"
+image_id: 1
+continute: false
+image_num: 1000
