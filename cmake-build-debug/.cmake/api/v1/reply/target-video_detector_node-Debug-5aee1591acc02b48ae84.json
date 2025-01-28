@@ -173,7 +173,7 @@
 				},
 				{
 					"backtrace" : 17,
-					"define" : "ROS_PACKAGE_NAME=\"rm_digtialimg_proc_test\""
+					"define" : "ROS_PACKAGE_NAME=\"rm_digtialimg_proc_deep\""
 				},
 				{
 					"define" : "video_detector_node_EXPORTS"
@@ -207,7 +207,7 @@
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/include"
+					"path" : "/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/include"
 				},
 				{
 					"backtrace" : 18,

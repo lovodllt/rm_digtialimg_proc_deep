@@ -903,8 +903,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug",
-		"source" : "/home/haomo/catkin_ws/src/rm_digtialimg_proc_test"
+		"build" : "/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug",
+		"source" : "/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep"
 	},
 	"version" : 
 	{

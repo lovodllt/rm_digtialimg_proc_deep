@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/gtest/googletest/cmake_install.cmake")
+  include("/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug/gtest/googletest/cmake_install.cmake")
 
 endif()
 

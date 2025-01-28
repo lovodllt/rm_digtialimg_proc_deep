@@ -1,7 +1,7 @@
 prefix=/usr/local
 
-Name: rm_digtialimg_proc_test
-Description: Description of rm_digtialimg_proc_test
+Name: rm_digtialimg_proc_deep
+Description: Description of rm_digtialimg_proc_deep
 Version: 0.0.0
 Cflags: 
 Libs: -L${prefix}/lib 

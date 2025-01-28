@@ -17,9 +17,9 @@
 #include <condition_variable>
 #include <thread>
 
-#define model_path "/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/model/mobilenetv3_last_int_all_new/last.xml"
-#define score_threshold 0.7
-#define nms_threshold 0.3
+#define model_path "/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/model/mobilenetv3_last_int_all_new/last.xml"
+#define score_threshold 0.1
+#define nms_threshold 0.7
 #define XML_SIZE 416
 
 /*

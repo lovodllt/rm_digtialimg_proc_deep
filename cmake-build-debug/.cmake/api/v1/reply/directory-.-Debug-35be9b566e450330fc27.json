@@ -269,25 +269,25 @@
 			"destination" : "lib/pkgconfig",
 			"paths" : 
 			[
-				"cmake-build-debug/catkin_generated/installspace/rm_digtialimg_proc_test.pc"
+				"cmake-build-debug/catkin_generated/installspace/rm_digtialimg_proc_deep.pc"
 			],
 			"type" : "file"
 		},
 		{
 			"backtrace" : 26,
 			"component" : "Unspecified",
-			"destination" : "share/rm_digtialimg_proc_test/cmake",
+			"destination" : "share/rm_digtialimg_proc_deep/cmake",
 			"paths" : 
 			[
-				"cmake-build-debug/catkin_generated/installspace/rm_digtialimg_proc_testConfig.cmake",
-				"cmake-build-debug/catkin_generated/installspace/rm_digtialimg_proc_testConfig-version.cmake"
+				"cmake-build-debug/catkin_generated/installspace/rm_digtialimg_proc_deepConfig.cmake",
+				"cmake-build-debug/catkin_generated/installspace/rm_digtialimg_proc_deepConfig-version.cmake"
 			],
 			"type" : "file"
 		},
 		{
 			"backtrace" : 28,
 			"component" : "Unspecified",
-			"destination" : "share/rm_digtialimg_proc_test",
+			"destination" : "share/rm_digtialimg_proc_deep",
 			"paths" : 
 			[
 				"package.xml"

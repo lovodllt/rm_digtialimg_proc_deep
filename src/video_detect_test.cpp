@@ -74,7 +74,7 @@ using namespace cv;
 using namespace std;
 
 
-namespace rm_digtialimg_proc_test {
+namespace rm_digtialimg_proc_deep {
 
 void Processor::onInit()
 {
@@ -125,4 +125,4 @@ void Processor::draw() {}
 
 }
 
-PLUGINLIB_EXPORT_CLASS(rm_digtialimg_proc_test::Processor, nodelet::Nodelet)
+PLUGINLIB_EXPORT_CLASS(rm_digtialimg_proc_deep::Processor, nodelet::Nodelet)

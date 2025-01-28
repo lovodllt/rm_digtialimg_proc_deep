@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/devel/setup.sh
+    local-name: /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug/devel/setup.sh

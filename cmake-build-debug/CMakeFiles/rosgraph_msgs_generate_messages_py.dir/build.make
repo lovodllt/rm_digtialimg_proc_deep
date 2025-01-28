@@ -53,10 +53,10 @@ RM = /home/haomo/Downloads/CLion-2024.1.5/clion-2024.1.5/bin/cmake/linux/x64/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haomo/catkin_ws/src/rm_digtialimg_proc_test
+CMAKE_SOURCE_DIR = /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug
+CMAKE_BINARY_DIR = /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug
 
 # Utility rule file for rosgraph_msgs_generate_messages_py.
 
@@ -78,6 +78,6 @@ CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend:
-	cd /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haomo/catkin_ws/src/rm_digtialimg_proc_test /home/haomo/catkin_ws/src/rm_digtialimg_proc_test /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug /home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug /home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
 

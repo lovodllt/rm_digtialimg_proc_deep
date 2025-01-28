@@ -19,9 +19,9 @@ except ImportError:
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/devel/env.sh')
+code = generate_environment_script('/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug/devel/env.sh')
 
-output_filename = '/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/catkin_generated/setup_cached.sh'
+output_filename = '/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:
     # print('Generate script for cached setup "%s"' % output_filename)
     f.write('\n'.join(code))

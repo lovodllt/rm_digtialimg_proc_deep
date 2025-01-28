@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(rm_digtialimg_proc_test)
+project(rm_digtialimg_proc_deep)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -47,7 +47,7 @@ find_package(OpenCV 4 REQUIRED)
 
 catkin_package(
         INCLUDE_DIRS include
-        LIBRARIES rm_digtialimg_proc_test
+        LIBRARIES rm_digtialimg_proc_deep
         CATKIN_DEPENDS
         rm_vision
         roscpp
@@ -87,7 +87,7 @@ include_directories(
 
 FILE(GLOB_RECURSE SOURCE_FILES "src/*.cpp")
 
-add_library(rm_digtialimg_proc_test
+add_library(rm_digtialimg_proc_deep
         src/video_detect_test.cpp
         src/inference.cpp
         src/number_classifier.cpp
@@ -108,7 +108,7 @@ link_libraries(libopenvino.so)
 #
 #)
 target_link_libraries(
-        rm_digtialimg_proc_test
+        rm_digtialimg_proc_deep
 #        ${catkin_LIBRARIES}
         ${OpenCV_LIBS}
         ${InferenceEngine_LIBRARIES}

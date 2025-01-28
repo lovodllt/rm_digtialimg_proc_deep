@@ -15,10 +15,10 @@
 // #include <inference_engine.hpp>
 #include <rm_vision/vision_base/processor_interface.h>
 #include <dynamic_reconfigure/server.h>
-//#include <rm_digtialimg_proc_test/ArmorConfig.h>
-//#include <rm_digtialimg_proc_test/PreprocessConfig.h>
-//#include <rm_digtialimg_proc_test/DrawConfig.h>
-//#include <rm_digtialimg_proc_test/MakedatasetConfig.h>
+//#include <rm_digtialimg_proc_deep/ArmorConfig.h>
+//#include <rm_digtialimg_proc_deep/PreprocessConfig.h>
+//#include <rm_digtialimg_proc_deep/DrawConfig.h>
+//#include <rm_digtialimg_proc_deep/MakedatasetConfig.h>
 #include "../include/config/ArmorConfig.h"
 #include "../include/config/PreprocessConfig.h"
 #include "../include/config/DrawConfig.h"
@@ -37,7 +37,7 @@
 
 using cv::Mat;
 using std::vector;
-namespace rm_digtialimg_proc_test
+namespace rm_digtialimg_proc_deep
 {
 class Bar
 {
@@ -334,7 +334,7 @@ private:
 //  ros::Subscriber track_sub_;
 //  ros::Subscriber detection_sub_;
 //  ros::Subscriber compute_sub_;
-//  ros::NodeHandle nh_;
+  ros::NodeHandle nh_;
   std::shared_ptr<image_transport::ImageTransport> it_;
   image_transport::CameraSubscriber cam_sub_;
 

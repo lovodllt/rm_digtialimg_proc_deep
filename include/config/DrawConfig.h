@@ -25,7 +25,7 @@
 #include <dynamic_reconfigure/config_init_mutex.h>
 #include <boost/any.hpp>
 
-namespace rm_digtialimg_proc_test
+namespace rm_digtialimg_proc_deep
 {
   class DrawConfigStatics;
 

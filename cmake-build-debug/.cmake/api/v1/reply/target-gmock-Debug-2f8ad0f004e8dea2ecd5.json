@@ -212,7 +212,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/haomo/catkin_ws/src/rm_digtialimg_proc_test/cmake-build-debug/gtest/lib",
+				"fragment" : "-Wl,-rpath,/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/cmake-build-debug/gtest/lib",
 				"role" : "libraries"
 			},
 			{
