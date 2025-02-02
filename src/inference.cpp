@@ -2,6 +2,7 @@
 // Created by gx on 24-1-27.
 //
 #include "../include/inference.hpp"
+#include "../include/process_plugins.h"
 #include <ie_core.hpp>
 static void using_once();
 static void Initialize()
@@ -129,7 +130,7 @@ dataImg preprocessImage(cv::Mat imgInput) {
     return data;
 }
 #endif
-std::vector<OneArmor> startInferAndNMS(dataImg img_data ){ //深度推理
+std::vector<OneArmor> startInferAndNMS(dataImg img_data, double score_threshold_,double nms_threshold_){ //深度推理
     //1.初始化模型
     using_once();
     //2.创建输入张量
@@ -169,7 +170,7 @@ std::vector<OneArmor> startInferAndNMS(dataImg img_data ){ //深度推理
                 continue;
             }
 
-            if (class_score > score_threshold) { //如果类别得分大于阈值(置信度)，则继续处理
+            if (class_score > score_threshold_) { //如果类别得分大于阈值(置信度)，则继续处理
 
                 SingleData.class_scores.push_back(class_score);
 
@@ -208,7 +209,7 @@ std::vector<OneArmor> startInferAndNMS(dataImg img_data ){ //深度推理
         SingleData.class_ids = cls - 4;
        //9.NMS(非极大值抑制)处理
         std::vector<int> indices;
-        cv::dnn::NMSBoxes(SingleData.boxes, SingleData.class_scores, score_threshold, nms_threshold, indices); //应用NMS去除重叠的边界框
+        cv::dnn::NMSBoxes(SingleData.boxes, SingleData.class_scores, score_threshold_, nms_threshold_, indices); //应用NMS去除重叠的边界框
 
       //  std::cout << "indices: " << indices.size() << std::endl;
         //10.整理结果

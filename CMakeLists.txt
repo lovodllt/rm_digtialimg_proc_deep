@@ -44,6 +44,9 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(OpenCV 4 REQUIRED)
 #find_package(OpenVINO REQUIRED)
 
+generate_dynamic_reconfigure_options(
+        cfg/Inference.cfg
+)
 
 catkin_package(
         INCLUDE_DIRS include
@@ -109,7 +112,7 @@ link_libraries(libopenvino.so)
 #)
 target_link_libraries(
         rm_digtialimg_proc_deep
-#        ${catkin_LIBRARIES}
+        ${catkin_LIBRARIES}
         ${OpenCV_LIBS}
         ${InferenceEngine_LIBRARIES}
         ${OpenVINO_DIR_TEST}

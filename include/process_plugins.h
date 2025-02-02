@@ -1,6 +1,3 @@
-//
-// Created by yichenghe on 2021/11/13.
-//
 
 #pragma once
 
@@ -15,14 +12,7 @@
 // #include <inference_engine.hpp>
 #include <rm_vision/vision_base/processor_interface.h>
 #include <dynamic_reconfigure/server.h>
-//#include <rm_digtialimg_proc_deep/ArmorConfig.h>
-//#include <rm_digtialimg_proc_deep/PreprocessConfig.h>
-//#include <rm_digtialimg_proc_deep/DrawConfig.h>
-//#include <rm_digtialimg_proc_deep/MakedatasetConfig.h>
-#include "../include/config/ArmorConfig.h"
-#include "../include/config/PreprocessConfig.h"
-#include "../include/config/DrawConfig.h"
-#include "../include/config/MakedatasetConfig.h"
+#include <rm_digtialimg_proc_deep/InferenceConfig.h>
 #include <mutex>
 #include <thread>
 #include <nodelet/nodelet.h>
@@ -251,7 +241,7 @@ public:
   void findBars();
 
   void paramReconfig() override;
-  bool changeStatusCB(rm_msgs::StatusChange::Request& change, rm_msgs::StatusChange::Response& res);
+
   ros::ServiceServer status_change_srv_;
 
   bool isLargeArmor(const Armor& armor);
@@ -303,30 +293,37 @@ public:
   void makeDigitalDataset(Armor armor);
   int g_num = 0;
 
-  dynamic_reconfigure::Server<ArmorConfig>* armor_cfg_srv_;
-  dynamic_reconfigure::Server<PreprocessConfig>* preprocess_cfg_srv_;
-  dynamic_reconfigure::Server<DrawConfig>* draw_cfg_srv_;
-  dynamic_reconfigure::Server<MakedatasetConfig>* make_dataset_cfg_srv_;
-  dynamic_reconfigure::Server<ArmorConfig>::CallbackType armor_cfg_cb_;
-  dynamic_reconfigure::Server<PreprocessConfig>::CallbackType preprocess_cfg_cb_;
-  dynamic_reconfigure::Server<DrawConfig>::CallbackType draw_cfg_cb_;
-  dynamic_reconfigure::Server<MakedatasetConfig>::CallbackType make_dataset_cfg_cb_;
+//  dynamic_reconfigure::Server<ArmorConfig>* armor_cfg_srv_;
+//  dynamic_reconfigure::Server<PreprocessConfig>* preprocess_cfg_srv_;
+//  dynamic_reconfigure::Server<DrawConfig>* draw_cfg_srv_;
+//  dynamic_reconfigure::Server<MakedatasetConfig>* make_dataset_cfg_srv_;
+//  dynamic_reconfigure::Server<ArmorConfig>::CallbackType armor_cfg_cb_;
+//  dynamic_reconfigure::Server<PreprocessConfig>::CallbackType preprocess_cfg_cb_;
+//  dynamic_reconfigure::Server<DrawConfig>::CallbackType draw_cfg_cb_;
+//  dynamic_reconfigure::Server<MakedatasetConfig>::CallbackType make_dataset_cfg_cb_;
 
-  void armorconfigCB(ArmorConfig& config, uint32_t level);
-  bool armor_dynamic_reconfig_initialized_ = false;
+  dynamic_reconfigure::Server<rm_digitalimg_proc_deep::InferenceConfig>* inference_cfg_srv_;
+  dynamic_reconfigure::Server<rm_digitalimg_proc_deep::InferenceConfig>::CallbackType inference_cfg_cb_;
 
-  void drawconfigCB(DrawConfig& config, uint32_t level);
+//  void armorconfigCB(ArmorConfig& config, uint32_t level);
+  bool inference_dynamic_reconfig_initialized_ = false;
 
-  void preProcessconfigCB(PreprocessConfig& config, uint32_t level);
+//  void drawconfigCB(DrawConfig& config, uint32_t level);
+
+//  void preProcessconfigCB(PreprocessConfig& config, uint32_t level);
   bool pre_process_dynamic_reconfig_initialized_ = false;
 
-  void datasetconfigCB(MakedatasetConfig& config, uint32_t level);
+//  void datasetconfigCB(MakedatasetConfig& config, uint32_t level);
 
+  void inferenceconfigCB(rm_digitalimg_proc_deep::InferenceConfig &config, uint32_t level);
   void onInit() override;
 
   // 定义回调函数处理接收到的图像
-  void callback2(const sensor_msgs::ImageConstPtr& msg);
-  void callback2(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info);
+  void callback(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info);
+
+  // inference
+  double score_threshold_;
+  double nms_threshold_;
 
 private:
 //  rm_msgs::TargetDetectionArray target_array_;
@@ -339,29 +336,6 @@ private:
   image_transport::CameraSubscriber cam_sub_;
 
   image_transport::Publisher target_pub_;
-
-//  void callback(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info)
-//  {
-//    if (!target_is_armor_)
-//    {
-//      //      ROS_INFO("not armor");
-//      return;
-//    }
-//    camera_info_ = info;
-//    target_array_.header = info->header;
-//    boost::shared_ptr<cv_bridge::CvImage> temp =
-//        boost::const_pointer_cast<cv_bridge::CvImage>(cv_bridge::toCvShare(img, "bgr8"));
-//    imageProcess(temp);
-//    findArmor();
-//    draw();
-//    for (auto& target : target_array_.detections)
-//    {
-//      target.pose.position.x = info->roi.x_offset;
-//      target.pose.position.y = info->roi.y_offset;
-//    }
-//    target_array_.is_red = target_is_red_;
-//    target_pub_.publish(target_array_);
-//  }
 
 
   void trackCB(const rm_msgs::TrackData track_data)

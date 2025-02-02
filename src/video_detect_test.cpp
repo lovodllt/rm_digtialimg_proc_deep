@@ -78,15 +78,53 @@ namespace rm_digtialimg_proc_deep {
 
 void Processor::onInit()
 {
-  ros::NodeHandle& nh = getPrivateNodeHandle();
-  it_ = make_shared<image_transport::ImageTransport>(nh);
-  cam_sub_ = it_->subscribeCamera("/hk_camera/image_raw", 10, &Processor::callback2, this);
-  target_pub_ = it_->advertise("/processor/result_msg", 10);
+
+  ros::NodeHandle& nh = getMTPrivateNodeHandle();
+  static ros::CallbackQueue my_queue;
+  nh.setCallbackQueue(&my_queue);
+  initialize(nh);
+  my_thread_ = std::thread([]() {
+    ros::SingleThreadedSpinner spinner;
+    spinner.spin(&my_queue);
+  });
 
   cv::namedWindow("result", cv::WINDOW_NORMAL); // 确保窗口名称唯一且可见
 }
 
-void Processor::callback2(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info)
+void Processor::initialize(ros::NodeHandle &nh) {
+  nh_ = ros::NodeHandle(nh, "digtialimg_proc_deep");
+  auto inference_params_init = [this, &nh]() { // lambda表达式，
+                                                           // this：捕获当前对象的所有成员。
+                                                           // &nh：按引用捕获 nh 变量
+    ROS_INFO("reading inference param");
+
+    score_threshold_ = nh.param("score_threshold", decltype(score_threshold_){});
+    nms_threshold_ = nh.param("nms_threshold", decltype(nms_threshold_){});
+
+    ROS_INFO("inference params reading done");
+  };
+
+  inference_params_init(); // 调用对应的lambda函数
+//
+  inference_cfg_srv_ = new dynamic_reconfigure::Server<rm_digitalimg_proc_deep::InferenceConfig>(ros::NodeHandle(nh_, "inference_condition")); // 创建动态配置服务器 inference_cfg_cb__cfg_srv_
+  inference_cfg_cb_ = boost::bind(&Processor::inferenceconfigCB, this, _1, _2); // 将回调函数绑定并存入 inference_cfg_cb__cfg_cb_
+  inference_cfg_srv_->setCallback(inference_cfg_cb_); // 设置回调函数，将之前绑定好的回调函数 armor_cfg_cb_ 设置到动态配置服务器 inference_cfg_cb__cfg_srv_ 上
+
+  it_ = make_shared<image_transport::ImageTransport>(nh_);
+  image_pub_ = it_->advertise("debug_image", 1);
+  cam_sub_ = it_->subscribeCamera("/hk_camera/image_raw", 10, &Processor::callback, this);
+  tf_buffer_ = new tf2_ros::Buffer(ros::Duration(10));
+  tf_listener_ = new tf2_ros::TransformListener(*tf_buffer_);
+  target_pub_ = it_->advertise("/processor/result_msg", 10);
+}
+
+void Processor::inferenceconfigCB(rm_digitalimg_proc_deep::InferenceConfig &config, uint32_t level)
+{
+  score_threshold_ = config.score_threshold;
+  nms_threshold_ = config.nms_threshold;
+}
+
+void Processor::callback(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info)
 {
   try {
     
@@ -96,7 +134,7 @@ void Processor::callback2(const sensor_msgs::ImageConstPtr& img, const sensor_ms
     cv::TickMeter tm; // tm:用于测量后续操作的时间
     tm.start();       // 开始计时
     dataImg blob = preprocessImage(frame);            // 图像预处理
-    auto armors_data = startInferAndNMS(blob);       // 深度推理
+    auto armors_data = startInferAndNMS(blob, score_threshold_, nms_threshold_); // 深度推理
     auto armors_data_ = classify(frame, armors_data); // 数字分类
     tm.stop();                                        // 停止计时
     std::cout << "time cost: " << tm.getTimeMilli() << "ms"
@@ -113,7 +151,6 @@ void Processor::callback2(const sensor_msgs::ImageConstPtr& img, const sensor_ms
   }
 }
 
-void Processor::initialize(ros::NodeHandle &nh) {}
 void Processor::imageProcess(cv_bridge::CvImagePtr &cv_image) {}
 void Processor::paramReconfig() {}
 void Processor::findArmor() {}

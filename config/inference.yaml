@@ -1,2 +1,2 @@
-score_threshold: 0.1
-nms_threshold: 0.7
+score_threshold: 0.7
+nms_threshold: 0.3
