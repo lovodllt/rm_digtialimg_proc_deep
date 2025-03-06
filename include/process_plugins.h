@@ -24,6 +24,7 @@
 #include <tf2_ros/transform_listener.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include "common.h"
+#include "inference.hpp"
 
 using cv::Mat;
 using std::vector;
@@ -302,8 +303,8 @@ public:
 //  dynamic_reconfigure::Server<DrawConfig>::CallbackType draw_cfg_cb_;
 //  dynamic_reconfigure::Server<MakedatasetConfig>::CallbackType make_dataset_cfg_cb_;
 
-  dynamic_reconfigure::Server<rm_digitalimg_proc_deep::InferenceConfig>* inference_cfg_srv_;
-  dynamic_reconfigure::Server<rm_digitalimg_proc_deep::InferenceConfig>::CallbackType inference_cfg_cb_;
+  dynamic_reconfigure::Server<rm_digtialimg_proc_deep::InferenceConfig>* inference_cfg_srv_;
+  dynamic_reconfigure::Server<rm_digtialimg_proc_deep::InferenceConfig>::CallbackType inference_cfg_cb_;
 
 //  void armorconfigCB(ArmorConfig& config, uint32_t level);
   bool inference_dynamic_reconfig_initialized_ = false;
@@ -315,7 +316,7 @@ public:
 
 //  void datasetconfigCB(MakedatasetConfig& config, uint32_t level);
 
-  void inferenceconfigCB(rm_digitalimg_proc_deep::InferenceConfig &config, uint32_t level);
+  void inferenceconfigCB(rm_digtialimg_proc_deep::InferenceConfig &config, uint32_t level);
   void onInit() override;
 
   // 定义回调函数处理接收到的图像
@@ -324,6 +325,40 @@ public:
   // inference
   double score_threshold_;
   double nms_threshold_;
+
+  // TargetColor
+  //aTargetColor target_color_{};
+
+  // 筛选装甲板颜色
+  void color_filtering(OneArmor& armor,vector<OneArmor>& qualifiedArmors)
+  {
+    int color_id = armor.class_ids; //  0:blue  1:red
+    std::cout<<target_color_<<std::endl;
+
+    if(target_color_ == 0)
+    {
+      qualifiedArmors.push_back(armor); //存储全部装甲板对象
+    }
+    else if(target_color_ == 1)
+    {
+      if(color_id == 0)
+      {
+        qualifiedArmors.push_back(armor); //存储蓝色装甲板对象
+      }
+    }
+    else if(target_color_ == 2)
+    {
+      if(color_id == 1)
+      {
+        qualifiedArmors.push_back(armor); //存储红色装甲板对象
+        ROS_ERROR("RED");
+      }
+    }
+    else
+    {
+      ROS_ERROR(".....");
+    }
+  }
 
 private:
 //  rm_msgs::TargetDetectionArray target_array_;

@@ -87,7 +87,6 @@ void extractNumbers(const cv::Mat & src, std::vector<OneArmor> & armors) //用�
 
         //存储数字图像
         armor.number_img = number_image;
-
     }
 }
 

@@ -53,4 +53,11 @@ enum MorphType
   HITMISS = 7,
   DISABLE = 8
 };
+
+enum TargetColor
+{
+  ALL = 0,
+  BLUE = 1,
+  RED = 2
+};
 }  // namespace rm_digtialimg_proc

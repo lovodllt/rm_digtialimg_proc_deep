@@ -2,6 +2,7 @@
 // Created by gx on 24-1-27.
 //
 
+#include <common.h>
 #ifndef V8_INFERENCE_H
 #include <algorithm>
 #include <condition_variable>
@@ -17,9 +18,14 @@
 
 #include <rm_digtialimg_proc_deep/InferenceConfig.h>
 
-#define model_path                                                             \
+/*#define model_path                                                             \
   "/home/haomo/catkin_ws/src/rm_digtialimg_proc_deep/model/"                   \
+  "mobilenetv3_last_int_all_new/last.xml"*/
+
+#define model_path                                                             \
+  "/home/lovod/rm_code/src/rm_visplugin/rm_digtialimg_proc_deep/model/"                   \
   "mobilenetv3_last_int_all_new/last.xml"
+
 #define XML_SIZE 416
 
 /*
@@ -57,7 +63,8 @@ static ov::Core core;
 static ov::CompiledModel compiled_model;
 static ov::InferRequest infer_request;
 static ov::Output<const ov::Node> input_port;
-
+extern rm_digtialimg_proc_deep::TargetColor target_color_;
+inline rm_digtialimg_proc_deep::TargetColor target_color_;
 
 dataImg preprocessImage(const cv::Mat &img,
                         cv::Size new_shape = cv::Size(XML_SIZE, XML_SIZE),

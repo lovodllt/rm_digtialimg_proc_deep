@@ -78,7 +78,6 @@ namespace rm_digtialimg_proc_deep {
 
 void Processor::onInit()
 {
-
   ros::NodeHandle& nh = getMTPrivateNodeHandle();
   static ros::CallbackQueue my_queue;
   nh.setCallbackQueue(&my_queue);
@@ -88,7 +87,7 @@ void Processor::onInit()
     spinner.spin(&my_queue);
   });
 
-  cv::namedWindow("result", cv::WINDOW_NORMAL); // 确保窗口名称唯一且可见
+  //cv::namedWindow("result", cv::WINDOW_NORMAL); // 确保窗口名称唯一且可见
 }
 
 void Processor::initialize(ros::NodeHandle &nh) {
@@ -105,8 +104,8 @@ void Processor::initialize(ros::NodeHandle &nh) {
   };
 
   inference_params_init(); // 调用对应的lambda函数
-//
-  inference_cfg_srv_ = new dynamic_reconfigure::Server<rm_digitalimg_proc_deep::InferenceConfig>(ros::NodeHandle(nh_, "inference_condition")); // 创建动态配置服务器 inference_cfg_cb__cfg_srv_
+
+  inference_cfg_srv_ = new dynamic_reconfigure::Server<rm_digtialimg_proc_deep::InferenceConfig>(ros::NodeHandle(nh_, "inference_condition")); // 创建动态配置服务器 inference_cfg_cb__cfg_srv_
   inference_cfg_cb_ = boost::bind(&Processor::inferenceconfigCB, this, _1, _2); // 将回调函数绑定并存入 inference_cfg_cb__cfg_cb_
   inference_cfg_srv_->setCallback(inference_cfg_cb_); // 设置回调函数，将之前绑定好的回调函数 armor_cfg_cb_ 设置到动态配置服务器 inference_cfg_cb__cfg_srv_ 上
 
@@ -118,10 +117,11 @@ void Processor::initialize(ros::NodeHandle &nh) {
   target_pub_ = it_->advertise("/processor/result_msg", 10);
 }
 
-void Processor::inferenceconfigCB(rm_digitalimg_proc_deep::InferenceConfig &config, uint32_t level)
+void Processor::inferenceconfigCB(rm_digtialimg_proc_deep::InferenceConfig &config, uint32_t level)
 {
   score_threshold_ = config.score_threshold;
   nms_threshold_ = config.nms_threshold;
+  target_color_ = static_cast<TargetColor>(config.target_color);
 }
 
 void Processor::callback(const sensor_msgs::ImageConstPtr& img, const sensor_msgs::CameraInfoConstPtr& info)

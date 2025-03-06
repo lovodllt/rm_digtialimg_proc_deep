@@ -229,7 +229,11 @@ std::vector<OneArmor> startInferAndNMS(dataImg img_data, double score_threshold_
 
             }
             sort_keypoints(armor.objects_keypoints); //对关键点进行排序
-            qualifiedArmors.push_back(armor); //存储装甲板对象
+
+            rm_digtialimg_proc_deep::Processor filtering;
+            std::cout<<"main"<<target_color_<< std::endl;
+            filtering.color_filtering(armor,qualifiedArmors);
+            //qualifiedArmors.push_back(armor); //存储装甲板对象
         }
     }
     return qualifiedArmors;
